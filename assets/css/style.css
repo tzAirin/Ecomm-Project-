@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200&display=swap');
+
+.nav-buttons
+{
+    margin-left : 50%
+}
+*{ margin :0 ;
+    padding:0 ;
+    box-sizing:  border-box;
+}
+body{
+    font-family: 'poppins', sans-serif;
+}
+h1{
+    font-size :2.5rem;
+    font-weight: 700;
+}
+h2{
+    font-size :1.8rem;
+    font-weight: 600;
+}
+h3{
+    font-size :1.5rem;
+    font-weight: 800;
+}
+h4{
+    font-size :1.2rem;
+    font-weight: 600;
+}
+h5{
+    font-size :1rem;
+    font-weight: 400 ;
+}
+h6{
+    color :#e6dcdc;
+
+}
+.navbar{
+    font-size : 16px;
+    padding-top :2rem !important;
+    padding-bottom : 0.5rem !important;
+    top :0;
+    left : 0;
+    
+}
+.navbar-light .navbar-nav .nav-link{
+    padding : 0 20px;
+    color :black ;
+    transition : 0.4s ease ;
+
+}
+.navbar-light .navbar-nav .nav-link:hover, 
+.navbar i:hover, 
+.navbar-light .navbar-nav .nav-link.active,
+.navbar i:hover{
+   color : coral  
+}
+.navbar i {
+    font-size : 1.2rem;
+    padding : 0 0.7px;
+    transition : 0.4s ease;
+    font-weight :500;
+    cursor : pointer;
+    margin-left: 5px;
+
+}
+
+/* Hero Section */
+#home{
+	background-image: url(..//imgs/back.jpg);
+    width :100%;
+    height: 120vh;
+    background-size: cover;
+    background-position-x: 90px;
+    background-position-y: 80px;
+    display: flex;
+
+	position: relative;
+	z-index: 1;
+}
+#home::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	background-color: black;
+	opacity: 0.7;
+	z-index: -1;
+}
+#home .home {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 50px;
+	justify-content: flex-start;
+}
+#home .cta{
+	display :inline-block;
+	padding: 10px,30px;
+	color:crimson;
+	background-color: transparent;
+	border : 2px solid crimson;
+	font-size: 2rem;
+	text-transform: uppercase;
+	letter-spacing: .1rem;
+	margin-top: 30px;
+	transition: .3s ease background-cover;
+	transition-property: background-color, color ;
+}
+#home  .cta:hover{
+ color: white;
+ background-color:crimson;
+}
+
+#home h2{
+	display: block;
+	width: fit-content;
+	font-size: 4rem;
+	position: relative;
+	color: crimson;
+	animation: text_reveal 0.5s ease forwards;
+	animation-delay: 1s;
+}
+#home h2:nth-child(1) {
+	animation-delay: 1s;
+}
+#home  h2:nth-child(2) {
+	animation-delay: 2s;
+}
+#home  h2:nth-child(3) {
+	animation: text_reveal_name 0.5s ease forwards;
+	animation-delay: 3s;
+}
+#home  h2 span {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 0;
+	background-color: crimson;
+	animation: text_reveal_box 1s ease;
+	animation-delay: 0.5s;
+}
+#home  h2:nth-child(1) span {
+	animation-delay: 0.5s;
+}
+#home  h2:nth-child(2) span {
+	animation-delay: 1.5s;
+}
+#home  h2:nth-child(3) span {
+	animation-delay: 2.5s;
+}
+
+@keyframes text_reveal_box {
+	50% {
+		width: 100%;
+		left: 0;
+	}
+	100% {
+		width: 0;
+		left: 100%;
+	}
+}
+@keyframes text_reveal {
+	100% {
+		color: white;
+	}
+}
+@keyframes text_reveal_name {
+	100% {
+		color: crimson;
+		font-weight: 500;
+	}
+}
+/* End Keyframes */
+@media only screen and (max-width:990px ){
+	.nav-buttons{
+		margin:10px
+	}
+	.nav-buttons ul{
+		margin :1 rem;
+		justify-content : flex-start;
+		align-items: flex-start
+	}
+	.nav-buttons ul .fas{
+		margin: 20px 5px 10px 20px;
+
+	}
+}
+#brand  {
+	padding-top: 30px;
+	padding-left: 0%;
+	padding-bottom: 30px;
+	padding-right:  0% ;
+
+	
+}
+#new .one img{
+	width: 100%;
+	height :100%;
+	background-position: center;
+	background-repeat:no-repeat ;
+ background-size: cover;
+}
+#new .one{
+
+	position: relative;
+}
+#new .one .details{
+	position : absolute;
+	top:0;
+	left:0;
+	color: burlywood;
+	font-weight: bold;
+	transition : 0.4s ease ;
+	opacity: 0.5;
+background-color: rgb(1,1,1) ;
+  width:100%;
+  height: 100%;
+}
+#new .one .details:hover{
+
+	background-color:cornsilk;
+}
+#new .one:nth-child(1) .details{
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items:flex-start ;
+	text-align: start;
+}
+#new .one:nth-child(2) .details{
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items:center ;
+	text-align: center;
+}
+#new .one:nth-child(3) .details{
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items:start;
+	text-align: center;
+}
